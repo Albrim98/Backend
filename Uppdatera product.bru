@@ -1,0 +1,25 @@
+meta {
+  name: Uppdatera product
+  type: http
+  seq: 3
+}
+
+put {
+  url: http://localhost:3000/api/products/1
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "name": "Gaming Laptop",
+    "quantity": 20,
+    "price": 15999.00,
+    "category": "Elektronik"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
